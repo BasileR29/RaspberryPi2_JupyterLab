@@ -1,0 +1,7 @@
+FROM basilerichard95/raspberrypi2_jupyter_lab:pandas
+
+# Updating
+RUN apt-get update && apt-get install libatlas3-base gfortran python3-scipy
+
+RUN pip3 --no-cache-dir install scikit-learn && \
+    pip3 --no-cache-dir install seaborn
